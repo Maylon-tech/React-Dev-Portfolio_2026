@@ -5,7 +5,7 @@ import './App.css'
 function App() {
 
   return (
-    <div className='min-h-screen bg-black'>
+    <div className='min-h-screen bg-black pb-[100vh]'>
       <Navbar />
 
       <main className="">
