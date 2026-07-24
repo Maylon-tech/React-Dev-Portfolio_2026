@@ -1,40 +1,40 @@
-import { useEffect, useState, useRef } from 'react'
+// import { useEffect, useState, useRef } from 'react'
 
-export const useScrollReveal = (options = {}) => {
-    const {
-        threshold = 0.1,
-        rootMargin = '0px'
-    } = options
+// export const useScrollReveal = (options = {}) => {
+//     const {
+//         threshold = 0.1,
+//         rootMargin = '0px'
+//     } = options
 
-    const [isVisible, setIsVisible] = useState(false)
-    const ref = useRef(null)
+//     const [isVisible, setIsVisible] = useState(false)
+//     const ref = useRef(null)
 
-    useEffect(() => {
-        const element = ref.current
-        if (!element) return
+//     useEffect(() => {
+//         const element = ref.current
+//         if (!element) return
 
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true)
-                    observer.unobserve(element)
-                }
-            },
-            {
-                threshold,
-                rootMargin
-            }
-        )
+//         const observer = new IntersectionObserver(
+//             ([entry]) => {
+//                 if (entry.isIntersecting) {
+//                     setIsVisible(true)
+//                     observer.unobserve(element)
+//                 }
+//             },
+//             {
+//                 threshold,
+//                 rootMargin
+//             }
+//         )
 
-        observer.observe(element)
+//         observer.observe(element)
 
-        return () => {
-            if (element) {
-                observer.unobserve(element)
-            }
-        }
-    }, [threshold, rootMargin])
+//         return () => {
+//             if (element) {
+//                 observer.unobserve(element)
+//             }
+//         }
+//     }, [threshold, rootMargin])
 
-    return { ref, isVisible }
+//     return { ref, isVisible }
 
-}
+// }

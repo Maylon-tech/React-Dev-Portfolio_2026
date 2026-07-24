@@ -71,7 +71,7 @@ export const NAV_LINKS = [
         label: 'Services',
     },
     {
-        id: 'contactg',
+        id: 'contact',
         label: 'Contact',
     },
 ]
