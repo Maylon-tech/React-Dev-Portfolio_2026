@@ -5,10 +5,10 @@ import { NAV_LINKS, PERSONAL_INFO } from '../../utils/constants'
 
 const Navbar = () => {
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
+  //const [isMenuOpen, setIsMenuOpen] = useState(false)
+  //const [isScrolled, setIsScrolled] = useState(false)
 
-  const activeSection = useScrollSpy(NAV_LINKS.map(link => link.id))
+  //const activeSection = useScrollSpy(NAV_LINKS.map(link => link.id))
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,14 +53,15 @@ const Navbar = () => {
           <nav className="hidden md:flex items-center gap-7">
             {
               NAV_LINKS.map((link) => (
-                <button
-                  className={`text-base font-medium transition-all duration-300 ${activeSection === link.id
-                    ? 'text-white'
-                    : 'text-white/70 hover:text-white'
-                  }`}
-                >
-                  {link.label}
-                </button>
+                <h1>Lnks here</h1>
+                // <button
+                //   className={`text-base font-medium transition-all duration-300 ${activeSection === link.id
+                //     ? 'text-white'
+                //     : 'text-white/70 hover:text-white'
+                //   }`}
+                // >
+                //   {link.label}
+                // </button>
               ))
             }
           </nav>
